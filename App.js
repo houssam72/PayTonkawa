@@ -60,11 +60,12 @@ export default function App() {
           headerShown: false,
         }}
       >
-        <Stack.Screen name="Profile" component={Profile} />
+        
         <Stack.Screen name="LoginRegister" component={LoginRegister} />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="MyCart" component={MyCart} />
         <Stack.Screen name="ProductInfo" component={ProductInfo} />
+        <Stack.Screen name="Profile" component={Profile} />
       </Stack.Navigator>
     </NavigationContainer>
     

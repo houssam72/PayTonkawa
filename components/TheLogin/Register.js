@@ -5,7 +5,10 @@ import InputText from "./InputTextComponent/InputText";
 import axios from "axios";
 
 export const Register = ({OnLoginPage}) => {
-  const [value, setValue] = useState("");
+  const [prenom, setPrenom] = useState("");
+  const [nom, setNom] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   return (
     <View style={LoginView.container}>
@@ -13,30 +16,31 @@ export const Register = ({OnLoginPage}) => {
       <InputText
         name="Prenom"
         placeHolder={"Entrez votre prenom"}
-        value={value}
-        setValue={setValue}
+        value={prenom}
+        setValue={setPrenom}
         required
       />
       <InputText
         name="Nom"
         placeHolder={"Entrez votre nom"}
-        value={value}
-        setValue={setValue}
+        value={nom}
+        setValue={setNom}
         required
       />
       <InputText
         name="Email"
         placeHolder={"Entrez votre adresse e-mail"}
-        value={value}
-        setValue={setValue}
+        value={email}
+        setValue={setEmail}
         required
       />
       <InputText
         name="Mot de passe"
         placeHolder={"Entrez votre mot de passe"}
-        value={value}
-        setValue={setValue}
+        value={password}
+        setValue={setPassword}
         required
+        secureTextEntry
       />
       <TouchableOpacity
         // onPress={() => {

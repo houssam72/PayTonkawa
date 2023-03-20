@@ -1,5 +1,5 @@
 import { Text, TextInput, TouchableOpacity, View } from "react-native";
-import {  textinput } from "../../styles/styles";
+import { textinput } from "../../styles/styles";
 import { FontAwesome } from "@expo/vector-icons";
 
 // type textProps = {
@@ -11,7 +11,8 @@ import { FontAwesome } from "@expo/vector-icons";
 // };
 
 const InputText = (props) => {
-  const { name, placeHolder, required, value,setValue } = props;
+  const { name, placeHolder, required, value, setValue, secureTextEntry } =
+    props;
   return (
     <>
       <View style={textinput.textView}>
@@ -26,8 +27,11 @@ const InputText = (props) => {
           placeholder={placeHolder}
           placeholderTextColor="white"
           value={value}
+          secureTextEntry={secureTextEntry}
           onChangeText={(val) => {
-            setValue(val);
+            {
+              setValue ? setValue(val) : null;
+            }
           }}
           onBlur={() => {}}
         />
@@ -36,4 +40,4 @@ const InputText = (props) => {
   );
 };
 
-export default InputText
+export default InputText;

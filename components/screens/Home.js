@@ -204,7 +204,7 @@ const Home = ({ navigation }) => {
               padding: 16,
             }}
           >
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>{navigation.navigate("Profile")}}>
               <Entypo
                 name="user"
                 style={{
