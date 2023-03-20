@@ -206,7 +206,7 @@ const Home = ({ navigation }) => {
           >
             <TouchableOpacity>
               <Entypo
-                name="shopping-bag"
+                name="user"
                 style={{
                   fontSize: 18,
                   color: COLOURS.white,

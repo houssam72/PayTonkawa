@@ -7,6 +7,7 @@ import MyCart from "./components/screens/MyCart";
 import ProductInfo from "./components/screens/ProductInfo";
 import axios from "axios";
 import LoginRegister from "./components/screens/LoginRegister";
+import Profile from "./components/screens/Profile";
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -59,6 +60,7 @@ export default function App() {
           headerShown: false,
         }}
       >
+        <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="LoginRegister" component={LoginRegister} />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="MyCart" component={MyCart} />
